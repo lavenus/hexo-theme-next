@@ -77,5 +77,10 @@
   {% include '_third-party/seo/baidu-push.swig' %}
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/exturl.swig' %}
+
+<!-- 背景动画 -->
+<script type="text/javascript" src="/js/src/particle.js"></script>
+<!-- 页面点击小心心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
 </body>
 </html>
