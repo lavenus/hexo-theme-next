@@ -47,7 +47,11 @@
                   </span>
                 {% endif %}
                 <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">
-                  {{ post.title | default(__('post.untitled'))}}
+                  {{ post.title | default(__('post.untitled'))}}<div>
+  {% if not is_index %}
+    {% include 'passage-end-tag.swig' %}
+  {% endif %}
+</div>
                 </a>
               {% else %}
                 {{ post.title }}
@@ -329,7 +333,12 @@
         {% include 'post-copyright.swig' with { post: post } %}
       {% endif %}
     </div>
-
+<!--本页结束-->
+<div>
+  {% if not is_index %}
+    {% include 'passage-end-tag.swig' %}
+  {% endif %}
+</div>
     <footer class="post-footer">
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
