@@ -455,6 +455,9 @@ algolia_search:
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
 
+# 文章末尾添加“本文结束”标记
+passage_end_tag:
+  enabled: true
 
 # Local search
 local_search:
