@@ -315,13 +315,15 @@
         {{ post.content }}
       {% endif  %}
     </div>
-<!--本页结束-->
-    <div>
-      {% if not is_index %}
-        {% include 'passage-end-tag.swig' %}
-      {% endif %}
-    </div>
-<!--本面结束-end-->
+
+    <!--本页结束-->
+	<div>
+	  {% if not is_index %}
+	    {% include 'passage-end-tag.swig' %}
+	  {% endif %}
+	</div>
+    <!--本页结束--end-->
+
     <div>
       {% if not is_index %}
         {% include 'wechat-subscriber.swig' %}
