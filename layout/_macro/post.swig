@@ -315,7 +315,13 @@
         {{ post.content }}
       {% endif  %}
     </div>
-
+<!--本页结束-->
+    <div>
+      {% if not is_index %}
+        {% include 'passage-end-tag.swig' %}
+      {% endif %}
+    </div>
+<!--本面结束-end-->
     <div>
       {% if not is_index %}
         {% include 'wechat-subscriber.swig' %}
@@ -333,12 +339,7 @@
         {% include 'post-copyright.swig' with { post: post } %}
       {% endif %}
     </div>
-<!--本页结束-->
-<div>
-  {% if not is_index %}
-    {% include 'passage-end-tag.swig' %}
-  {% endif %}
-</div>
+
     <footer class="post-footer">
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
